@@ -1,6 +1,6 @@
 /* client code to call various methods in the Calculate library
  * @author Annabel Sun
- * @version September 12, 2018
+ * @version September 16, 2018
  */
 
 

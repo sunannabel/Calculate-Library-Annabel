@@ -1,6 +1,6 @@
 /* contains various methods to do math calculations
  * @author Annabel Sun
- * @version September 12 2018
+ * @version September 16 2018
  */
 public class Calculate {
 	public static int square (int number) {
