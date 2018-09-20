@@ -6,28 +6,27 @@
 
 public class DoMath {
 	public static void main(String[] args) {
-		System.out.println(Calculate.square(-3)); 	
-		System.out.println(Calculate.cube(-3));
-		System.out.println(Calculate.average(2.0, 4.0));
-		System.out.println(Calculate.average(1.0, 3.0, 5.0));
-		System.out.println(Calculate.toDegrees(2.0));
-		System.out.println(Calculate.toRadians(180));
-		System.out.println(Calculate.discriminant(2.0, 3.0, 4.0));
-		System.out.println(Calculate.toImproperFrac(4, 1, 2));
-		System.out.println(Calculate.toMixedNum(7, 2));
-		System.out.println(Calculate.foil(2, 3, 6, -7, "n"));
-		System.out.println(Calculate.isDivisibleBy(5, 10));
-		System.out.println(Calculate.absValue(-9.0));
-		System.out.println(Calculate.max(3.0, 2.0));
-		System.out.println(Calculate.max(7.0, 9.0, 8.0)); //num2;  9.0
-		System.out.println(Calculate.min(1, 2)); //return 1
-		System.out.println(Calculate.round2(1.235));
-		System.out.println(Calculate.exponent(2.0, 4));
-		System.out.println(Calculate.factorial(4));
-		System.out.println(Calculate.isPrime(223));
-		System.out.println(Calculate.gcf(18,24));
-		System.out.println(Calculate.sqrt(1.5625));
-		System.out.println(Calculate.gcf(5, 7));
+		System.out.println("square: " + Calculate.square(-3)); 	
+		System.out.println("cube: " + Calculate.cube(-3));
+		System.out.println("average (2): " + Calculate.average(2.0, 4.0));
+		System.out.println("average (3) : "+ Calculate.average(1.0, 3.0, 5.0));
+		System.out.println("toDegrees: " + Calculate.toDegrees(2.0));
+		System.out.println("toRadians: " + Calculate.toRadians(180));
+		System.out.println("discriminant: " + Calculate.discriminant(2.0, 3.0, 4.0));
+		System.out.println("toImproperFrac: " + Calculate.toImproperFrac(4, 1, 2));
+		System.out.println("toMixedNum: " + Calculate.toMixedNum(7, 2));
+		System.out.println("foil: " + Calculate.foil(2, 3, 6, -7, "n"));
+		System.out.println("isDivisibleBy: " + Calculate.isDivisibleBy(5, 10));
+		System.out.println("absValue: " + Calculate.absValue(-9.0));
+		System.out.println("max(2): " + Calculate.max(3.0, 2.0));
+		System.out.println("max(3): " + Calculate.max(7.0, 6.0, 8.0)); //num2;  6.0
+		System.out.println("min: " + Calculate.min(1, 2)); //return 1
+		System.out.println("round2: " + Calculate.round2(1.235));
+		System.out.println("exponent: " + Calculate.exponent(2.0, 4));
+		System.out.println("factorial: " + Calculate.factorial(4));
+		System.out.println("isPrime: " + Calculate.isPrime(223));
+		System.out.println("gcf: " + Calculate.gcf(18,24));
+		System.out.println("sqrt: " + Calculate.sqrt(1.5625));
 	}
 }
 	

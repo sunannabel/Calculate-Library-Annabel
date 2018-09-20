@@ -99,8 +99,7 @@ public class Calculate {
 	
 	//returns the largest of three doubles; overloads max
 	public static double max (double num1, double num2, double num3) {
-		double x = max(num1, max(num2, num3));
-		return x;
+		return  max(num1, max(num2, num3));
 	}
 	
 	//returns the smallest of two numbers
