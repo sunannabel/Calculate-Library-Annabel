@@ -1,6 +1,6 @@
 /* contains various methods to do math calculations
  * @author Annabel Sun
- * @version September 19 2018
+ * @version October 2 2018
  */
 
 public class Calculate {
@@ -62,6 +62,9 @@ public class Calculate {
 	
 	//checks for divisibility of two ints
 	public static boolean isDivisibleBy (int num1, int num2) {
+		if (num1 == 0 || num2 == 0) {
+			throw new IllegalArgumentException("can't divide by 0!");
+		}
 		if (num1 > num2) {
 			if (num1 % num2 == 0) {
 				return true;
@@ -127,6 +130,9 @@ public class Calculate {
 	
 	//raises num1 to the num2th power
 	public static double exponent(double num1, int num2) {
+		if (num2 < 0) {
+			throw new IllegalArgumentException("exponent can't be negative!");
+		}
 		double num3 = 1.0;
 		for (int i = 1; i <=num2; i++) {
 			num3 = num3*num1;
@@ -136,6 +142,9 @@ public class Calculate {
 	
 	//returns the factorial of an int
 	public static int factorial(int number) {
+		if (number < 0) {
+			throw new IllegalArgumentException("factorial can't be negative!");
+		}
 		int num2 = 1;
 		for (int i = number; i >= 2; i--) {
 			num2 = num2*i;
@@ -166,11 +175,29 @@ public class Calculate {
 	
 	//returns the square root of a number
 	public static double sqrt(double number) { 
+		if (number < 0) {
+			throw new IllegalArgumentException("can't sqrt a negative number!");
+		}
 		double guess = 0.1;
 		while (absValue(number - guess*guess) > 0.005) { 
 			guess = (number/guess + guess)/2; 
 		}
 		return round2(guess);
+	}
+	
+	public static String quadForm(int a, int b, int c) {
+		double discrim = discriminant((double) a, (double) b, (double) c); 
+		System.out.println(discrim);
+		if (discrim < 0) {
+			return ("no real roots");
+		} else if (discrim == 0) {
+			double x = (-1.0*b) / (2.0*a);
+			return (x+"");
+		} else {
+			double xplus = ((-1*b) + sqrt(discrim))/(2*a);
+			double xminus = ((-1*b) - sqrt(discrim))/(2*a);
+			return (xminus + " and " + xplus);
+		}
 	}
 	
 }

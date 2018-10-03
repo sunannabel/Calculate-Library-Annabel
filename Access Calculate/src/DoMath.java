@@ -1,6 +1,6 @@
 /* client code to call various methods in the Calculate library
  * @author Annabel Sun
- * @version September 16, 2018
+ * @version October 2, 2018
  */
 
 
@@ -12,7 +12,7 @@ public class DoMath {
 		System.out.println("average (3) : "+ Calculate.average(1.0, 3.0, 5.0));
 		System.out.println("toDegrees: " + Calculate.toDegrees(2.0));
 		System.out.println("toRadians: " + Calculate.toRadians(180));
-		System.out.println("discriminant: " + Calculate.discriminant(2.0, 3.0, 4.0));
+		System.out.println("discriminant: " + Calculate.discriminant(4.0, 12.0, 9.0));
 		System.out.println("toImproperFrac: " + Calculate.toImproperFrac(4, 1, 2));
 		System.out.println("toMixedNum: " + Calculate.toMixedNum(7, 2));
 		System.out.println("foil: " + Calculate.foil(2, 3, 6, -7, "n"));
@@ -27,6 +27,7 @@ public class DoMath {
 		System.out.println("isPrime: " + Calculate.isPrime(223));
 		System.out.println("gcf: " + Calculate.gcf(18,24));
 		System.out.println("sqrt: " + Calculate.sqrt(1.5625));
+		System.out.println("quadform: " + Calculate.quadForm(4, 12, 9));
 	}
 }
 	
