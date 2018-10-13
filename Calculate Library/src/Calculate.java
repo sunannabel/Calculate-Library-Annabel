@@ -185,13 +185,16 @@ public class Calculate {
 		return round2(guess);
 	}
 	
+	//finds the x intercepts using quadratic formula
 	public static String quadForm(int a, int b, int c) {
 		double discrim = discriminant((double) a, (double) b, (double) c); 
-		System.out.println(discrim);
 		if (discrim < 0) {
 			return ("no real roots");
 		} else if (discrim == 0) {
 			double x = (-1.0*b) / (2.0*a);
+			if (x == 0) {
+				x = 0;
+			}
 			return (x+"");
 		} else {
 			double xplus = ((-1*b) + sqrt(discrim))/(2*a);
