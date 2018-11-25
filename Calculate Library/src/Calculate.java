@@ -174,6 +174,7 @@ public class Calculate {
 	}
 	
 	//returns the greatest common factor of two ints
+	//BROKEN: if larger number is divisible by smaller number, will return larger
 	public static int gcf(int num1, int num2) {
 		int guess = 1;
 		for (int i = 1; i <= absValue(num1); i++) {
