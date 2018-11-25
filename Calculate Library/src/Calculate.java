@@ -62,6 +62,9 @@ public class Calculate {
 	
 	//checks for divisibility of two ints
 	public static boolean isDivisibleBy (int num1, int num2) {
+		num1 = absValue(num1);
+		num2 = absValue(num2);
+		
 		if (num1 == 0 || num2 == 0) {
 			throw new IllegalArgumentException("can't divide by 0!");
 		}
@@ -84,6 +87,14 @@ public class Calculate {
 	
 	//returns the absolute value of a double
 	public static double absValue (double number) {
+		if (number < 0) {
+			return number * -1;
+		} else {
+			return number;
+		}
+	}
+	
+	public static int absValue (int number) {
 		if (number < 0) {
 			return number * -1;
 		} else {
@@ -165,7 +176,7 @@ public class Calculate {
 	//returns the greatest common factor of two ints
 	public static int gcf(int num1, int num2) {
 		int guess = 1;
-		for (int i = 1; i <= num1; i++) {
+		for (int i = 1; i <= absValue(num1); i++) {
 			if (isDivisibleBy(num1, i) && isDivisibleBy(num2, i) ) {
 				guess = i;
 			}
